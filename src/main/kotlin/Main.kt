@@ -1,48 +1,38 @@
 fun main() {
+    val c1 = readLine()!!.toInt()
+    val c2 = readLine()!!.toInt()
+    var v1 = intArrayOf(c1)
+    var v2 = intArrayOf(c2)
 
+    val arr = Array(2) { IntArray(c1) }
 
-    var mensaje :String ="felicidades"
-    var edad = 30
-    printMen(mensaje)
-    printVelas(edad)
-    printCapSup(edad)
-    printCapInf(edad)
+    v1 = inicia_array(c1)
+    v2 = inicia_array(c2)
 
-    printMen(mensaje)
 
 }
 
-fun printMen(mensaje:String) {
-    return
-}
-
-fun printVelas(edad: Int) {
-
-    repeat(edad) {
-        print(",")
+fun inicia_array(columna: Int): IntArray {
+    var array = intArrayOf(columna)
+    for (i in 0..columna - 1) {
+        array[i] = 2 * i + columna
     }
-    println()
-
-
-    repeat(edad) {
-        print("|")
-    }
-    println()
-
+    return array
 }
 
-fun printCapSup(edad: Int) {
-    repeat(edad) {
-        print("=")
+fun leer_array(v1: IntArray, v2: IntArray) {
+    for (i in v1) {
+        println(i)
     }
-    println()
+
+    for (j in v2) {
+        println(j)
+    }
 }
 
-fun printCapInf(edad: Int) {
-
-    repeat(edad) {
-        print("@")
-    }
-    println()
-
+fun doble_array(v1: IntArray, v2: IntArray): Array<IntArray> {
+    var matriz = Array(2) { IntArray(v1.size) }
+    return matriz
 }
+
+
